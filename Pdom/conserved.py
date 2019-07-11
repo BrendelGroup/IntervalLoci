@@ -57,7 +57,7 @@ def main(args):
                 ilocus = line.strip()
                 simple_iloci[ilocus] = True
 
-    pattern = args.workdir + '/*/*.protein2ilocus.txt'
+    pattern = args.workdir + '/*/*.protein2ilocus.tsv'
     for infile in glob.glob(pattern):
         with open(infile, 'r') as instream:
             for line in instream:

@@ -31,7 +31,7 @@ Rather than reporting (φ, σ) values for each chromosome/scaffold sequence, how
 For any genome with (φ, σ) values whose distance from the centroid exceeds 2.25 times the average (φ, σ) distance from the centroid, these outliers were removed and the centroid recomputed.
 
 ```bash
-genhub-compact.py --workdir=data/ --centroid=2.25 --length=1000000
+genhub-compact.py --workdir=data/ --centroid=2.25 --length=1000000 \
                   --iqnt=0.95 --gqnt=0.05 \
                   Amel Am32 Dqua Dqcr Pcan Pccr Pdom Pdtl \
     > phisigma-alternates.tsv

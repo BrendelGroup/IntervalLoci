@@ -31,10 +31,10 @@ fidibus --workdir=data/ --numprocs=4 \
         --refr=Acep,Ador,Aflo,Bimp,Bter,Cbir,Cflo,Hsal,Lhum,Mrot,Pbar,Sinv,Tcas \
         download prep iloci breakdown stats
 
-cd pdom/r1.2/
+cd Pdom/r1.2/
 fidibus --workdir=../../data/ \
         --numprocs=4 \
-        --refr=Acep,Ador,Aech,Aflo,Amel,Bimp,Bter,Cbir,Cflo,Dmel,Dqua,Hsal,Lhum,Mrot,Nvit,Pbar,Pcan,Pdtl,Sinv,Tcas \
+        --refr=Acep,Ador,Aech,Aflo,Amel,Bimp,Bter,Obir,Cflo,Dmel,Dqua,Hsal,Lhum,Mrot,Nvit,Pbar,Pcan,Pdtl,Sinv,Tcas \
         cluster
 ../conserved.py --workdir=../../data/ GenHub.hiloci.tsv Amel Bter Cflo Hsal Pcan Pdtl Nvit \
     > hiloci-conserved-r1.2.tsv
@@ -48,7 +48,7 @@ fidibus --workdir=../../data/ \
 cd ../refseq/
 fidibus --workdir=../../data/ \
         --numprocs=4 \
-        --refr=Acep,Ador,Aech,Aflo,Amel,Bimp,Bter,Cbir,Cflo,Dmel,Dqua,Hsal,Lhum,Mrot,Nvit,Pbar,Pcan,Pdom,Sinv,Tcas \
+        --refr=Acep,Ador,Aech,Aflo,Amel,Bimp,Bter,Obir,Cflo,Dmel,Dqua,Hsal,Lhum,Mrot,Nvit,Pbar,Pcan,Pdom,Sinv,Tcas \
         cluster
 ../conserved.py --workdir=../../data/ GenHub.hiloci.tsv Amel Bter Cflo Hsal Pcan Pdtl Nvit \
     > hiloci-conserved-refseq.tsv

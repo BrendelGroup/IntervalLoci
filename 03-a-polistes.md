@@ -28,7 +28,7 @@ Definitely increase `--numprocs` for these steps if your machine is capable.
 ```bash
 # Skip several previously downloaded genomes
 fidibus --workdir=data/ --numprocs=4 \
-        --refr=Acep,Ador,Aflo,Bimp,Bter,Cbir,Cflo,Hsal,Lhum,Mrot,Pbar,Sinv,Tcas \
+        --refr=Acep,Ador,Aflo,Bimp,Bter,Obir,Cflo,Hsal,Lhum,Mrot,Pbar,Sinv,Tcas \
         download prep iloci breakdown stats
 
 cd Pdom/r1.2/

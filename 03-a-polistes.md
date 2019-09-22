@@ -13,11 +13,11 @@ genhub-milocus-summary.py --workdir=data/ --outfmt=tex Pdom
 ```bash
 fidibus --workdir=data/ \
         --numprocs=3 \
-        --refr=Aech,Amel,Nvit \
+        --refr=Aech,Amh3,Nvit \
         download prep iloci breakdown stats
 genhub-compact.py --workdir=data/ --length=2000000 \
                   --iqnt=0.95 --gqnt=0.05 \
-                  Amel Agam Aech Dmel Pdom Nvit \
+                  Amh3 Agam Aech Dmel Pdom Nvit \
     > phisigma-pdom.tsv
 ```
 
@@ -34,9 +34,9 @@ fidibus --workdir=data/ --numprocs=4 \
 cd Pdom/r1.2/
 fidibus --workdir=../../data/ \
         --numprocs=4 \
-        --refr=Acep,Ador,Aech,Aflo,Amel,Bimp,Bter,Obir,Cflo,Dmel,Dqua,Hsal,Lhum,Mrot,Nvit,Pbar,Pcan,Pdtl,Sinv,Tcas \
+        --refr=Acep,Ador,Aech,Aflo,Amh3,Bimp,Bter,Obir,Cflo,Dmel,Dqua,Hsal,Lhum,Mrot,Nvit,Pbar,Pcan,Pdtl,Sinv,Tcas \
         cluster
-../conserved.py --workdir=../../data/ GenHub.hiloci.tsv Amel Bter Cflo Hsal Pcan Pdtl Nvit \
+../conserved.py --workdir=../../data/ GenHub.hiloci.tsv Amh3 Bter Cflo Hsal Pcan Pdtl Nvit \
     > hiloci-conserved-r1.2.tsv
 ../breakdown.py --counts <(cat ../../data/*/*.iloci.tsv) \
                 GenHub.hiloci.tsv hiloci-conserved-r1.2.tsv \
@@ -48,9 +48,9 @@ fidibus --workdir=../../data/ \
 cd ../refseq/
 fidibus --workdir=../../data/ \
         --numprocs=4 \
-        --refr=Acep,Ador,Aech,Aflo,Amel,Bimp,Bter,Obir,Cflo,Dmel,Dqua,Hsal,Lhum,Mrot,Nvit,Pbar,Pcan,Pdom,Sinv,Tcas \
+        --refr=Acep,Ador,Aech,Aflo,Amh3,Bimp,Bter,Obir,Cflo,Dmel,Dqua,Hsal,Lhum,Mrot,Nvit,Pbar,Pcan,Pdom,Sinv,Tcas \
         cluster
-../conserved.py --workdir=../../data/ GenHub.hiloci.tsv Amel Bter Cflo Hsal Pcan Pdtl Nvit \
+../conserved.py --workdir=../../data/ GenHub.hiloci.tsv Amh3 Bter Cflo Hsal Pcan Pdtl Nvit \
     > hiloci-conserved-refseq.tsv
 ../breakdown.py --counts <(cat ../../data/*/*.iloci.tsv) \
                 GenHub.hiloci.tsv hiloci-conserved-refseq.tsv \

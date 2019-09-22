@@ -50,7 +50,7 @@ fidibus --workdir=../../data/ \
         --numprocs=4 \
         --refr=Acep,Ador,Aech,Aflo,Amh3,Bimp,Bter,Obir,Cflo,Dmel,Dqua,Hsal,Lhum,Mrot,Nvit,Pbar,Pcan,Pdom,Sinv,Tcas \
         cluster
-../conserved.py --workdir=../../data/ GenHub.hiloci.tsv Amh3 Bter Cflo Hsal Pcan Pdtl Nvit \
+../conserved.py --workdir=../../data/ GenHub.hiloci.tsv Amh3 Bter Cflo Hsal Pcan Pdom Nvit \
     > hiloci-conserved-refseq.tsv
 ../breakdown.py --counts <(cat ../../data/*/*.iloci.tsv) \
                 GenHub.hiloci.tsv hiloci-conserved-refseq.tsv \

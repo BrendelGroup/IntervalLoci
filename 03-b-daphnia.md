@@ -1,4 +1,4 @@
-# 3a. *Daphnia pulex*
+# 3b. *Daphnia pulex*
 
 ## Data retrieval
 

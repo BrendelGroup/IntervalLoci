@@ -1,4 +1,4 @@
-# 3a. *Volvox carteri*
+# 3c. *Volvox carteri*
 
 ## Data retrieval, computation of iLoci, and computing clusters/hiLoci
 

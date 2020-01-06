@@ -29,12 +29,12 @@ cd chlorophyta/
 
 # Build BLAST search index
 mkdir blastdbs
-for species in Apro Crei Csub Cvar Mpus Msrc Oluc Otau Vcar 
+for species in Apro Crei Csub Cvar Mpus Mcom Oluc Otau Vcar 
 do
     makeblastdb -in species/${species}/${species}.prot.fa -dbtype prot -parse_seqids
 done
 
-for species in Apro Crei Csub Cvar Mpus Msrc Oluc Otau Vcar
+for species in Apro Crei Csub Cvar Mpus Mcom Oluc Otau Vcar
 do
     # Grab proteins from iLoci initially labeled  "Unmatched"
     grep Unmatched Chlorophyta.hiLocus.pre-status.tsv \

@@ -5,7 +5,7 @@ import glob
 
 
 iloc2prot = dict()
-mapfiles = list(glob.glob('species/*/*.protein2ilocus.txt'))
+mapfiles = list(glob.glob('species/*/*.protein2ilocus.tsv'))
 repfiles = list(glob.glob('species/*/*.protids.txt'))
 for mapfile, repfile in zip(mapfiles, repfiles):
     with open(mapfile, 'r') as mapstream, open(repfile, 'r') as repstream:

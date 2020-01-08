@@ -15,28 +15,6 @@ genhub-compact.py --workdir=data/ --length=1000000 \
     > phisigma-refr.tsv
 ```
 
-## Different sources of annotation
-
-To evaluate the robustness of the (φ, σ) measures with respect to annotation source, we also computed (φ, σ) values on four social insect genomes for which both community and NCBI/RefSeq annotations are available.
-
-```bash
-fidibus --workdir=data/ \
-        --numprocs=4 \
-        --refr=Amel,Am32,Dqua,Dqcr,Pcan,Pccr,Pdom,Pdtl \
-        download prep iloci breakdown stats
-```
-
-When computing (φ, σ) values for these genomes, the same filters for outliers described above were appled.
-Rather than reporting (φ, σ) values for each chromosome/scaffold sequence, however, a single pair of (φ, σ) values was reported for each genome, computed as the average (centroid) of all chromosome/scaffold-level (φ, σ) values for that species.
-For any genome with (φ, σ) values whose distance from the centroid exceeds 2.25 times the average (φ, σ) distance from the centroid, these outliers were removed and the centroid recomputed.
-
-```bash
-genhub-compact.py --workdir=data/ --centroid=2.25 --length=1000000 \
-                  --iqnt=0.95 --gqnt=0.05 \
-                  Amel Am32 Dqua Dqcr Pcan Pccr Pdom Pdtl \
-    > phisigma-alternates.tsv
-```
-
 ## Different values of δ
 
 To evaluate the robustness of the (φ, σ) measures with respect to the δ (delta) parameter, we recomputed iLoci at δ=300 and δ=750 for comparison with the default δ=500.

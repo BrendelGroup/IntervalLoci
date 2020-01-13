@@ -6,11 +6,11 @@ We assessed the compactness of 10 references genomes on two related measures.
 - σ (sigma), the proportion of the genome sequence occupied by miLoci
 
 Because these measures are uninformative on small scales, (φ, σ) values were computed only for chromosome or scaffold sequences of at least 1 Mb in length.
-Extremely long iiLoci (those in the top 5% of length for each species) and extremely short giLoci (those in the bottom 5%) were discarded as outliers prior to computing (φ, σ).
+Extremely long iiLoci (those in the top 5% of length for each species) were discarded as outliers prior to computing (φ, σ).
 
 ```bash
 genhub-compact.py --workdir=data/ --length=1000000 \
-                  --iqnt=0.95 --gqnt=0.05 \
+                  --iqnt=0.95 \
                   Scer Cele Crei Mtru Agam Dmel Xtro Drer Mmus Hsap \
     > phisigma-refr.tsv
 ```
@@ -37,17 +37,17 @@ Centroid (φ, σ) values were then computed for each value of δ for comparison.
 
 ```bash
 genhub-compact.py --workdir=data/ --centroid=2.25 --length=1000000 \
-                  --iqnt=0.95 --gqnt=0.05 \
+                  --iqnt=0.95 \
                   Scer Cele Crei Mtru Agam Dmel Xtro Drer Mmus Hsap \
     > phisigma-refr-delta500.tsv
 
 genhub-compact.py --workdir=data-delta300/ --centroid=2.25 --length=1000000 \
-                  --iqnt=0.95 --gqnt=0.05 \
+                  --iqnt=0.95 \
                   Scer Cele Crei Mtru Agam Dmel Xtro Drer Mmus Hsap \
     > phisigma-refr-delta300.tsv
 
 genhub-compact.py --workdir=data-delta750/ --centroid=2.25 --length=1000000 \
-                  --iqnt=0.95 --gqnt=0.05 \
+                  --iqnt=0.95 \
                   Scer Cele Crei Mtru Agam Dmel Xtro Drer Mmus Hsap \
     > phisigma-refr-delta750.tsv
 ```

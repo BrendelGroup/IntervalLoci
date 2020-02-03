@@ -23,7 +23,7 @@ genhub-milocus-summary.py --workdir=data/ --outfmt=tex Mvit
 
 ```bash
 genhub-compact.py --workdir=data/ --length=1000000 \
-                  --iqnt=0.95 Mvit Hsap Mmus \
+                  --iqnt=0.95 --gqnt=0.05 Mvit Hsap Mmus \
     > phisigma-mvit.tsv
 ```
 ## Figures

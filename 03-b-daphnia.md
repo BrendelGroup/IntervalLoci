@@ -28,7 +28,7 @@ genhub-milocus-summary.py --workdir=data/ --outfmt=tex Dpul
 
 ```bash
 genhub-compact.py --workdir=data/ --length=2000000 \
-                  --iqnt=0.95 \
-                  Amel Agam Dmel Dpul Tcas Turt \
+                  --iqnt=0.95 --gqnt=0.05 \
+                  Amh3 Agam Dmel Dpul Tcas Turt \
     > phisigma-dpul.tsv
 ```

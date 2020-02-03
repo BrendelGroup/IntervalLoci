@@ -10,7 +10,7 @@ Extremely long iiLoci (those in the top 5% of length for each species) were disc
 
 ```bash
 genhub-compact.py --workdir=data/ --length=1000000 \
-                  --iqnt=0.95 \
+                  --iqnt=0.95 --gqnt=0.05 \
                   Scer Cele Crei Mtru Agam Dmel Xtro Drer Mmus Hsap \
     > phisigma-refr.tsv
 ```
@@ -37,17 +37,17 @@ Centroid (φ, σ) values were then computed for each value of δ for comparison.
 
 ```bash
 genhub-compact.py --workdir=data/ --centroid=2.25 --length=1000000 \
-                  --iqnt=0.95 \
+                  --iqnt=0.95 --gqnt=0.05 \
                   Scer Cele Crei Mtru Agam Dmel Xtro Drer Mmus Hsap \
     > phisigma-refr-delta500.tsv
 
 genhub-compact.py --workdir=data-delta300/ --centroid=2.25 --length=1000000 \
-                  --iqnt=0.95 \
+                  --iqnt=0.95 --gqnt=0.05 \
                   Scer Cele Crei Mtru Agam Dmel Xtro Drer Mmus Hsap \
     > phisigma-refr-delta300.tsv
 
 genhub-compact.py --workdir=data-delta750/ --centroid=2.25 --length=1000000 \
-                  --iqnt=0.95 \
+                  --iqnt=0.95 --gqnt=0.05 \
                   Scer Cele Crei Mtru Agam Dmel Xtro Drer Mmus Hsap \
     > phisigma-refr-delta750.tsv
 ```

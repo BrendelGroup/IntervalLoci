@@ -96,3 +96,13 @@ do
     grep $pid species/Crei/Crei.all.prot.fa
 done > deflines-HighlyConserved.txt
 ```
+
+## Compactness
+
+```bash
+cd ../
+genhub-compact.py --workdir=data/ --length=1000000 \
+                  --iqnt=0.95 --gqnt=0.05 \
+                  Vcar Crei Cvar Csub Mcom Oluc \
+    > phisigma-vcar.tsv
+```

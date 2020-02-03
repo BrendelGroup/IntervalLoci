@@ -16,7 +16,7 @@ fidibus --workdir=data/ \
         --refr=Aech,Amh3,Nvit \
         download prep iloci breakdown stats
 genhub-compact.py --workdir=data/ --length=2000000 \
-                  --iqnt=0.95 \
+                  --iqnt=0.95 --gqnt=0.05 \
                   Amh3 Agam Aech Dmel Pdom Nvit \
     > phisigma-pdom.tsv
 ```

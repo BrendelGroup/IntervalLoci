@@ -101,8 +101,8 @@ done > deflines-HighlyConserved.txt
 
 ```bash
 cd ../
-genhub-compact.py --workdir=data/ --length=2000000 \
+genhub-compact.py --workdir=data/ --length=1000000 \
                   --iqnt=0.95 --gqnt=0.05 \
                   Vcar Crei Cvar Csub Mcom Oluc \
-    > phisigma-dpul.tsv
+    > phisigma-vcar.tsv
 ```

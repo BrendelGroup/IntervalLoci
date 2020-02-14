@@ -7,7 +7,7 @@
 # http://genome.jgi.doe.gov/Dappu1/Dappu1.download.ftp.html
 fidibus --workdir=data/ \
         --numprocs=2 \
-        --refr=Turt \
+        --refr=Turt,Tcas \
         --local \
         --label=Dpul \
         --gdna=Daphnia_pulex.fasta.gz \

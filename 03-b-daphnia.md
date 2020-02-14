@@ -6,7 +6,7 @@
 # Daphnia files must be downloaded manually
 # http://genome.jgi.doe.gov/Dappu1/Dappu1.download.ftp.html
 fidibus --workdir=data/ \
-        --numprocs=2 \
+        --numprocs=3 \
         --refr=Turt,Tcas \
         --local \
         --label=Dpul \

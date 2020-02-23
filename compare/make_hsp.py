@@ -16,14 +16,14 @@ locus_lengths = {}
 for locus in iloci: 
     indices = blast.name2 == locus
     ilocus = blast[indices]
-    total_length = ilocus.iloc[0]['size2']
+    query_length = ilocus.iloc[0]['size2']
     match_loci = list(set(ilocus['name1']))
     chains = {}
     for match in match_loci:
         indices = ilocus.name1 == match
         hsp = ilocus[indices]
         length = hsp['length2'].sum()
-        if length / total_length >= 0.9:
+        if length / query_length >= 0.9:
             chains[match] = hsp['length2'].sum()
     try:
         targets = [key for m in [max(chains.values())] for key,val in chains.items() if val == m]

@@ -16,9 +16,9 @@ for locus in iloci:
     for match in match_loci:
         indices = ilocus.name1 == match
         hsp = ilocus[indices]
-        length = hsp['length2'].sum()
+        length = hsp['nmatch'].max()
         if length / total_length >= 0.9:
-            chains[match] = hsp['length2'].sum()
+            chains[match] = length
     try:
         targets = [key for m in [max(chains.values())] for key,val in chains.items() if val == m]
         assert len(targets) > 0

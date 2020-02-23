@@ -22,9 +22,9 @@ for locus in iloci:
     for match in match_loci:
         indices = ilocus.name1 == match
         hsp = ilocus[indices]
-        length = hsp['length2'].sum()
+        length = hsp['length2'].max()
         if length / query_length >= 0.9:
-            chains[match] = hsp['length2'].sum()
+            chains[match] = length
     try:
         targets = [key for m in [max(chains.values())] for key,val in chains.items() if val == m]
         if chains[targets[0]] > ilocus[ilocus.name1 == targets[0]].iloc[0]['size1'] * 0.9:

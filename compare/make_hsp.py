@@ -22,7 +22,7 @@ for locus in iloci:
     for match in match_loci:
         indices = ilocus.name1 == match
         hsp = ilocus[indices]
-        length = hsp['length2'].max()
+        length = hsp['nmatch'].max()
         if length / query_length >= 0.9:
             chains[match] = length
     try:

@@ -33,6 +33,9 @@ for locus in iloci:
             ids = {}
             for target in targets:
                 search = ilocus[ilocus.name1 == target]
+                if len(search) > 1:
+                    max_len = search['nmatch'].max()
+                    search = search[search.nmatch == max_len]
                 ids[target] = search['num1'].sum() / search['num2'].sum()
                 tiebreakers = [key for m in [max(ids.values())] for key,val in ids.items() if val == m]
             relations[locus] = tiebreakers

@@ -11,9 +11,9 @@ We then use a custom Python script to assign each iLocus a provisional status ba
 
 ```bash
 cd chlorophyta
-genhub-build.py --cfgdir=config/ --batch=chlorophyta+ \
-                --workdir=../data/ --numprocs=4 \
-                download format prepare stats cluster
+fidibus --cfgdir=config/ --refrbatch=chlorophyta+ \
+                --workdir=../data/ --numprocs=13 \
+                download prep iloci breakdown stats cluster
 python status.py GenHub.hiloci.tsv > Chlorophyta.hiLocus.pre-status.tsv
 ```
 

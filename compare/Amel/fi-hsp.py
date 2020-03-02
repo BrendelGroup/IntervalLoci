@@ -1,6 +1,6 @@
 import pandas as pd
 import pickle
-blast = pd.read_csv("entire_ci.tsv", sep='\t')
+blast = pd.read_csv("fi.tsv", sep='\t')
 blast[['num1','num2']] = blast['identity'].str.split('/',expand=True)
 blast[['num1','num2']] = blast[['num1','num2']].apply(pd.to_numeric)
 blast.rename(columns = {'#name1' : 'name1'}, inplace = True)
@@ -44,7 +44,7 @@ for locus in iloci:
             relations[locus] = targets
     except ValueError:
         continue
-with open('Amel_ci-entirerelations','wb') as f:
+with open('Amel_fi-relations','wb') as f:
     pickle.dump(relations,f)
 for locus in relations:
     if len(relations[locus]) > 0:

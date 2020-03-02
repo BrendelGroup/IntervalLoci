@@ -17,7 +17,7 @@ si_ids = set(siloci['LocusId'])
 ni_ids = set(niloci['LocusId'])
 ci_ids = set(ciloci['LocusId'])
 print(len(ni_ids))
-input_seq_iterator = SeqIO.parse(species + ".iloci.fa", "fasta")
+input_seq_iterator = list(SeqIO.parse(species + ".iloci.fa", "fasta"))
 
 ii_seq_iterator = (record for record in input_seq_iterator \
                       if record.id.split()[0] in ii_ids)

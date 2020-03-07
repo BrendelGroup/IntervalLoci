@@ -1,7 +1,7 @@
 # Annotation/Assembly comparisons
 
 We investigate the transition of iLoci between assembly and annotation versions for two genomes: Apis mellifera and Arabidopsis thaliana. 
-
+## Data Retrieval and Processing
 If the data files are not present, they may be downloaded and processed with the following:
 
 ```bash
@@ -27,7 +27,7 @@ python parse_loci.py
 cd ../Atha
 python parse_loci.py
 ```
-
+## Comparison Analysis
 Now that we have the data files, we may begin the comparison analysis. First, we compute chain alignments using LASTZ and postprocess with some custom 
 Python scripts. 
 
@@ -40,5 +40,5 @@ lastz Amh3.iloci.fa[multiple] Amel.iloci.fa --match=1,9 --filter=identity:95 --c
 To run the entire analysis broken down by iLocus type, run the corresponding chain.sh script in each subdirectory. 
 This generates a TSV file containing the query iLoci and all of the chains against the target, along with the attributes of both. We are mainly interested in the maximal chain lengths for each query. Additional python scripts 
 then processes the TSV files and produces the relevant counts. These may be done by calling hsp.sh and then counts.sh
-
+## Visualization
 See [comparisons_plot.ipynb](https://github.com/timlai4/IntervalLoci/blob/comparisons/compare/comparison_plots.ipynb) for visualizations of these data.

@@ -1,7 +1,7 @@
 from Bio import SeqIO
 import pandas as pd
 
-species = "Amh3"
+species = "Amel"
 iloci = pd.read_csv(species + '.iloci.tsv',sep='\t')
 ii = iloci['LocusClass'] == "iiLocus"
 iiloci = iloci[ii]
